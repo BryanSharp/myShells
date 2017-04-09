@@ -1,0 +1,6 @@
+#!/bin/bash
+allFile=`find ./ -name "*.c"`
+for file in $allFile
+do
+	echo $file
+done

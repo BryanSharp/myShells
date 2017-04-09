@@ -1,0 +1,11 @@
+#!/bin/bash
+rep="-"
+to="_"
+for file in $@
+do
+	if [[ $file =~ ".png" ]]
+	then
+		replaced=${file//$rep/$to}
+		mv $file $replaced
+	fi
+done

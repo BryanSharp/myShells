@@ -1,0 +1,6 @@
+#!/bin/bash
+#发送小米推送
+nowSec=`date +%s`
+notifyId=$(($nowSec%1111111))
+echo $notifyId
+curl -H "Authorization:key=xPItevC8Q9yKRnizw8svmw==" -d "payload={\"action\":\"ch_driver\"}&pass_through=0&title=启奏：B端有更新&description=B端更新于&notify_id=${notifyId}&notify_type=-1" https://api.xmpush.xiaomi.com/v2/message/all

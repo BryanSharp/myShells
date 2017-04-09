@@ -1,0 +1,14 @@
+#!/bin/bash
+echo "IFS是$IFS"
+echo "$IFS"|od -t x1
+saveIFS=$IFS
+IFS=$(echo "\\")
+echo "======="
+echo "$IFS"|od -t x1
+for file in $@
+do
+	targetName=${file//\ /}
+	echo "mv $file ${targetName}"
+	mv $file ${targetName}
+done
+IFS=$saveIFS

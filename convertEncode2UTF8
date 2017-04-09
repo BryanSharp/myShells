@@ -1,0 +1,10 @@
+#!/bin/bash
+for file in $@
+do
+	encoding=`enca $file|awk -F "\n" '{split($1,arr,";"); print arr[2];}'`
+	encoding=${encoding//\ /}
+	echo "文件名：$file 编码：$encoding"
+	if [[ "$encoding" == GB* ]];then
+		enconv -L zh_CN -x UTF-8 $file
+	fi
+done

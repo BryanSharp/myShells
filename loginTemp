@@ -1,0 +1,3 @@
+#!/bin/bash
+ssh 182.92.9.131 -l bushaopeng
+

@@ -1,0 +1,12 @@
+#!/bin/bash
+rep=$1
+to=$2
+suffix=$3
+for file in `ls`
+do
+	if [[ $file =~ "$suffix" ]]
+	then
+		replaced=${file//$rep/$to}
+		mv $file $replaced
+	fi
+done

@@ -1,0 +1,5 @@
+#!/bin/bash
+deleteSpace *.*
+convertEncode2UTF8 *.c
+replaceInFilename "复件(2)" "" c
+replaceInFilename "复件" "" c

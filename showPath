@@ -1,0 +1,2 @@
+#!/bin/bash
+echo $PATH|awk -f ~/myComm/splitPath.awk
