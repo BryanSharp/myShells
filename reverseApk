@@ -1,0 +1,5 @@
+#!/bin/bash
+REVERSE_HOME='/Users/bushaopeng/Desktop/myGit/reverseTools'
+APK_TOOL=${REVERSE_HOME}/apktool.jar
+SIGN_APK=${REVERSE_HOME}/signapk.jar
+java -jar $APK_TOOL d -f $1
