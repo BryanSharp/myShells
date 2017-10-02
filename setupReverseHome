@@ -1,0 +1,3 @@
+#!/bin/bash
+export REVERSE_HOME='/Users/bushaopeng/Desktop/myGit/reverseTools'
+export APK_TOOL=${REVERSE_HOME}/apktool_2.2.2.jar
